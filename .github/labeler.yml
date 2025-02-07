@@ -1,0 +1,15 @@
+GCP:
+  - "gcp/**/*"
+  - "**/gcp/*"
+
+Azure:
+  - "azure/**/*"
+  - "**/azure/*"
+
+setup:
+  - "**/provider.tf"
+  - "**/variables.tf"
+
+resource:
+  - "**/main.tf"
+  - "**/resources.tf"
