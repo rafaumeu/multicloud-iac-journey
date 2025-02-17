@@ -6,6 +6,7 @@ A modern infrastructure as code project exploring multiple cloud providers (GCP,
 
 [![Terraform](https://img.shields.io/badge/Terraform-5.17.0-844FBA.svg)](https://www.terraform.io/)
 [![GCP](https://img.shields.io/badge/GCP-Provider-4285F4.svg)](https://cloud.google.com/)
+[![Azure](https://img.shields.io/badge/Azure-Provider-0078D4.svg)](https://azure.microsoft.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
@@ -22,6 +23,7 @@ A modern infrastructure as code project exploring multiple cloud providers (GCP,
 
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
 ---
 </div>
@@ -30,6 +32,7 @@ A modern infrastructure as code project exploring multiple cloud providers (GCP,
 
 - **Multi-Cloud Support**:
   - GCP resource management
+  - Azure resource management
   - Provider-specific configurations
   - Resource tagging and organization
   
@@ -37,6 +40,12 @@ A modern infrastructure as code project exploring multiple cloud providers (GCP,
   - Compute Engine instances
   - Network configuration
   - Zone and region management
+  - Resource tagging
+
+- **Azure Configuration**:
+  - Resource Group management
+  - Virtual Network setup
+  - Region configuration
   - Resource tagging
 
 - **Infrastructure Management**:
@@ -49,7 +58,9 @@ A modern infrastructure as code project exploring multiple cloud providers (GCP,
 
 - Terraform 1.0+
 - GCloud CLI configured
+- Azure CLI configured
 - GCP account with appropriate permissions
+- Azure subscription with appropriate permissions
 - Basic understanding of cloud concepts
 
 ## 🛠️ Setup
