@@ -1,161 +1,71 @@
 <div align="center">
-
-# 🚀 MultiCloud IaC Journey
-
-A modern infrastructure as code project exploring multiple cloud providers (GCP, Azure, AWS) using Terraform.
-
-[![Terraform](https://img.shields.io/badge/Terraform-5.17.0-844FBA.svg)](https://www.terraform.io/)
-[![GCP](https://img.shields.io/badge/GCP-Provider-4285F4.svg)](https://cloud.google.com/)
-[![Azure](https://img.shields.io/badge/Azure-Provider-0078D4.svg)](https://azure.microsoft.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
----
-
-## 📖 Table of Contents
-
-| [Tech Stack](#-tech-stack) | [Features](#-features) | [Prerequisites](#-prerequisites) |
-|---------------------------|------------------------|----------------------------------|
-| [Setup](#️-setup) | [Project Structure](#️-project-structure) | [Environment Variables](#-environment-variables) |
-
----
-
-### ⚡ Tech Stack
-
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-
----
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=180&section=header&text=Multicloud%20IaC%20Journey&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Terraform%20Modules%20for%20AWS,%20GCP%20and%20Azure&descSize=18&descAlignY=52"/>
 </div>
 
-## 🚀 Features
+<p align="center">
+  ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform) ![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws) ![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud) ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure) ![DevOps](https://img.shields.io/badge/DevOps-FF0080?style=for-the-badge)
+</p>
 
-- **Multi-Cloud Support**:
-  - GCP resource management
-  - Azure resource management
-  - Provider-specific configurations
-  - Resource tagging and organization
-  
-- **GCP Configuration**:
-  - Compute Engine instances
-  - Network configuration
-  - Zone and region management
-  - Resource tagging
+## Overview
 
-- **Azure Configuration**:
-  - Resource Group management
-  - Virtual Network setup
-  - Region configuration
-  - Resource tagging
+A collection of reusable **Terraform modules** for multi-cloud infrastructure provisioning across **AWS**, **Google Cloud Platform**, and **Microsoft Azure**. Each module follows best practices for security, modularity, and environment separation.
 
-- **Infrastructure Management**:
-  - Terraform state management
-  - Provider configuration
-  - Resource organization
-  - Multi-environment support
+## Features
 
-## 📦 Prerequisites
+- Reusable Terraform modules for 3 major cloud providers
+- Multi-environment support (dev, staging, prod) via `tfvars`
+- Remote state management with S3 backend
+- Cost-optimized resource configurations
+- Infrastructure as Code best practices
 
-- Terraform 1.0+
-- GCloud CLI configured
-- Azure CLI configured
-- GCP account with appropriate permissions
-- Azure subscription with appropriate permissions
-- Basic understanding of cloud concepts
+## Modules
 
-## 🛠️ Setup
+| Cloud | Module | Description |
+|---|---|---|
+| **AWS** | S3 Bucket | Versioned, encrypted bucket with IAM policies |
+| **AWS** | EC2 Instance | Auto-scaling group with load balancer |
+| **GCP** | Compute Engine | VM instance with firewall rules |
+| **GCP** | Cloud Storage | Bucket with lifecycle management |
+| **Azure** | Blob Storage | Storage account with container |
+| **Azure** | Virtual Machine | VM with network interface |
 
-1. Clone the repository:
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **Terraform** | Infrastructure as Code |
+| **AWS** | Amazon Web Services resources |
+| **GCP** | Google Cloud Platform resources |
+| **Azure** | Microsoft Azure resources |
+
+## Getting Started
 
 ```bash
 git clone https://github.com/rafaumeu/multicloud-iac-journey.git
 cd multicloud-iac-journey
-```
 
-2. Initialize Terraform:
-
-```bash
+# Initialize
 terraform init
+
+# Plan
+terraform plan -var-file="environments/dev.tfvars"
+
+# Apply
+terraform apply -var-file="environments/dev.tfvars"
 ```
 
-3. Plan the infrastructure:
+## What I Learned
 
-```bash
-terraform plan
-```
+- Multi-cloud architecture patterns and trade-offs
+- Terraform module composition and reusability
+- State management and locking strategies
+- Cloud provider specific configurations
 
-4. Apply the configuration:
+## License
 
-```bash
-terraform apply
-```
-
-## 📝 Contributing
-
-### Commit Convention
-
-We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
-
-```bash
-<type>(<scope>): <description>
-
-[optional body]
-
-[optional footer(s)]
-```
-
-#### Types
-
-- `feat`: A new feature
-- `fix`: A bug fix
-- `docs`: Documentation only changes
-- `style`: Changes that do not affect the meaning of the code
-- `refactor`: A code change that neither fixes a bug nor adds a feature
-
-#### Scopes
-
-- `gcp`: Changes to GCP configuration
-- `azure`: Changes to Azure configuration
-- `aws`: Changes to AWS configuration
-- `docs`: Changes to documentation
-- `ci`: Changes to CI/CD pipeline
-
-## 🏗️ Project Structure
-
-```
-multicloud-iac-journey/
-├── main.tf                    # Main configuration file
-├── providers.tf               # Cloud providers configuration
-├── variables.tf               # Variable definitions
-└── .github/
-    ├── workflows/            # GitHub Actions workflows
-    └── labeler.yml           # PR labeler configuration
-```
-
-## 🔧 Environment Variables
-
-```bash
-# GCP Configuration
-GOOGLE_CLOUD_PROJECT="rafael-450215"
-GOOGLE_CREDENTIALS="path/to/credentials.json"
-```
-
-## 📤 Outputs
-
-After applying the infrastructure, you'll get:
-
-- Compute Engine instance details
-- Network configuration information
-- Resource IDs and names
-
----
+MIT
 
 <div align="center">
-Made with ❤️ by Rafael Dias Zendron
-</div>
-<div align="center">
-<img src="https://github.com/rafaumeu.png" width="100" height="100" style="border-radius: 50%;">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-dias-zendron-528290132/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu)
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=100&section=footer"/>
+  <br/><sub>Built with ❤️ by <a href="https://github.com/rafaumeu">Rafael Zendron</a></sub>
 </div>
