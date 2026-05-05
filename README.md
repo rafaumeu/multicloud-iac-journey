@@ -1,9 +1,9 @@
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=180&section=header&text=Multicloud%20IaC%20Journey&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Terraform%20Modules%20for%20AWS,%20GCP%20and%20Azure&descSize=18&descAlignY=52"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=180&section=header&text=Multicloud%20IaC%20Journey&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Terraform%20Modules%20for%20AWS,%20GCP%20and%20Azure&descSize=18&descAlignY=52"/>
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform" alt="Terraform"/> <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws" alt="AWS"/> <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud" alt="GCP"/> <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure" alt="Azure"/> <img src="https://img.shields.io/badge/DevOps-FF0080?style=for-the-badge" alt="DevOps"/>
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform" alt="Terraform"/> <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws" alt="AWS"/> <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud" alt="GCP"/> <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure" alt="Azure"/> <img src="https://img.shields.io/badge/DevOps-FFCA28?style=for-the-badge" alt="DevOps"/>
 </p>
 
 ## Overview
@@ -66,6 +66,6 @@ terraform apply -var-file="environments/dev.tfvars"
 MIT
 
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=100&section=footer"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FFCA28&height=100&section=footer"/>
   <br/><sub>Built with ❤️ by <a href="https://github.com/rafaumeu">Rafael Zendron</a></sub>
 </div>
