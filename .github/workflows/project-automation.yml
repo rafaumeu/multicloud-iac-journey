@@ -16,7 +16,7 @@ jobs:
 
       - name: Move to In Progress
         if: github.event.action == 'opened' || github.event.action == 'reopened'
-        uses: alex-page/github-project-automation-plus@v0.8.3
+        uses: alex-page/github-project-automation-plus@v0.9.0
         with:
           project: MultiCloud IaC Journey
           column: In Progress
@@ -24,7 +24,7 @@ jobs:
 
       - name: Move to Done
         if: github.event.action == 'closed'
-        uses: alex-page/github-project-automation-plus@v0.8.3
+        uses: alex-page/github-project-automation-plus@v0.9.0
         with:
           project: MultiCloud IaC Journey
           column: Done
